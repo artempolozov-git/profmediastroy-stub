@@ -1,28 +1,50 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="app-content">
+      <Home></Home>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Home from './components/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Home
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  html, body {
+    height: 100%;
+    font-size: 16px;
+  }
+  body {
+    margin: initial;
+    font-family: RobotoCondensed;
+  }
+  #app {
+    flex-direction: column;
+    min-height: 100%;
+  }
+  @font-face {
+    font-family: RobotoCondensed;
+    src: url('./assets/RobotoCondensed-Bold.ttf');
+    font-weight: bold;
+    font-display: fallback;
+  }
+  @font-face {
+    font-family: RobotoCondensed;
+    src: url('./assets/RobotoCondensed-Regular.ttf');
+    font-weight: normal;
+  }
+  #app-content {
+    flex: 1 0 auto;
+    max-width: 1920px;
+    align-self: center;
+    width: -webkit-fill-available;
+  }
 </style>
